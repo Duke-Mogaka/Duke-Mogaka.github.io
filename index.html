@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duke Mogaka personal portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/12fd030327.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/logo.PNG" class="logo" alt="logo image" width="200" height="80">
+                <ul>
+                    <li><a href="#"> Home </a></li>
+                    <li><a href="#"> About </a></li>
+                    <li><a href="#"> Services </a></li>
+                    <li><a href="#"> My Projects </a></li>`
+                    <li><a href="#"> Contact </a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Computer scientist</p>
+                <h1>Hi, I'm<span> Duke</span><br> from Kenya</h1>
+            </div>
+        </div>
+
+    <!----------------about------------------------>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/duke.jpg" alt="my photo" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub_title">About Me</h1>
+                    <p>am duke mogaka a computer science student at zetech university</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link " onclick="opentab('skills')" >Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')" >Experience</p>
+                        <p class="tab-links" onclick="opentab('education')" >Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing application and websites</li>
+                            <li><span>Android developer</span><br>Developing android applications</li>
+                            <li><span>ML/AI</span><br>Using advanced AI and ML algorthms to solve problems</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022 - Current</span><br>Software development traing at Zetech university</li>
+                            <li><span>2021 - 2022</span><br>Computer Training at ST Anns college</li>
+                            <li><span>2017 - 2021</span><br>Higher Education at koses secondary </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021 - 2025</span><br>Zetech university</li>
+                            <li><span>2018 - 2021</span><br>Koderobara secondary</li>
+                            <li><span>2013 - 2017</span><br>Rigoko academy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------------services-------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub_title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p> i offer services in web designing you can contact me me if you need a web designing services</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+            <i class="fa-brands fa-android"></i>
+            <h2>Android development</h2>
+            <p> i offer services in building android applications you can contact me me if you need an android application</p>
+            <a href="#">learn more</a>
+        </div>
+        <div>
+        <i class="fa-solid fa-crop"></i>
+        <h2>UI/UX Design</h2>
+        <p> i offer services in UI/UX designing you can contact me me if you need a designing services</p>
+        <a href="#">learn more</a>
+    </div>
+</div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+    
+</body>
+</html>
